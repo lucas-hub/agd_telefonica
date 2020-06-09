@@ -4,7 +4,7 @@ class Contato():
         self.telefone = telefone
 
     def __repr__(self):
-        return '{},{}'.format(self.nome, self.telefone)
+        return '<contato>\n<nome>{}</nome>\n<telefone>{}</telefone>\n</contato>'.format(self.nome, self.telefone)
 
     def __str__(self):
         return self.__repr__()
@@ -19,7 +19,7 @@ class Contato():
         return contato
 
 class Agenda():
-    def __init__(self, arquivoPadrao="agendaoo.txt"):
+    def __init__(self, arquivoPadrao="agenda.xml"):
         self.listaDeContatos = []
         self._arquivoPadrao = ""
         self.arquivoPadrao = arquivoPadrao
@@ -92,5 +92,8 @@ if __name__ == '__main__':
             minhaAgenda.novo_contato()
         elif opcao == 2:
             print(minhaAgenda)
-        elif opcao == 3 or opcao == 0:
+        elif opcao == 3:
+            minhaAgenda.salvar_agenda()
+        elif opcao == 0:
+            print('Saindo do programa...')
             minhaAgenda.salvar_agenda()

@@ -11,7 +11,7 @@ def lista_salvar(nomearquivo='agenda.xml'):
     arq = open(nomearquivo, 'a')
     # Testar se o arquivo foi aberto
     for item in Lista:
-        arq.write('{0},{1}\n'.format(item['nome'], item['telefone']))
+        arq.write('<contato>\n<nome>{}</nome>\n<telefone>{}</telefone>\n</contato>'.format(item['nome'], item['telefone']))
     arq.close()
 
 

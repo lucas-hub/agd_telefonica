@@ -1,2 +1,8 @@
-a,a
-Lucas,91283-2837
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<contatos>
+    <contato>
+        <nome>Lucas</nome>
+        <telefone>98123-9823</telefone>
+    </contato>
+</contatos>
